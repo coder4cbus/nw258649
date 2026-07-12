@@ -1,0 +1,25 @@
+{
+    "version": "3.37.1",
+    "description": "A CLI for Quarkus Java framework",
+    "homepage": "https://quarkus.io/",
+    "license": "Apache-2.0",
+    "suggest": {
+        "JDK": "java/openjdk"
+    },
+    "url": "https://github.com/quarkusio/quarkus/releases/download/3.37.1/quarkus-cli-3.37.1.zip",
+    "extract_dir": "quarkus-cli-3.37.1",
+    "hash": "ce1aa819093d4409f904cb996815cfe1066d3e85064dfefcb3e2957a7e414250",
+    "bin": "bin\\quarkus.bat",
+    "checkver": {
+        "url": "https://registry.quarkus.io/client/platforms",
+        "jsonpath": "$..version",
+        "regex": "([\\d+\\.]+)"
+    },
+    "autoupdate": {
+        "url": "https://github.com/quarkusio/quarkus/releases/download/$version/quarkus-cli-$version.zip",
+        "extract_dir": "quarkus-cli-$version",
+        "hash": {
+            "url": "$baseurl/checksums_sha256.txt"
+        }
+    }
+}
