@@ -1,0 +1,51 @@
+{
+    "version": "9.0.315",
+    "description": ".NET is a free, cross-platform, open source developer platform for building many different types of applications.",
+    "homepage": "https://www.microsoft.com/net/",
+    "license": "MIT",
+    "suggest": {
+        "vcredist": "extras/vcredist2022"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/9.0.315/dotnet-sdk-9.0.315-win-x64.zip",
+            "hash": "sha512:5799c71270a56686e08b0f219b77a000f33790d92e0be0778c4c0923945dc551bf37e55e920dd8a527d32efd7554751b1073e02dc318d9f2274961ebd2c189fa"
+        },
+        "32bit": {
+            "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/9.0.315/dotnet-sdk-9.0.315-win-x86.zip",
+            "hash": "sha512:68b20a92dedd5576d56ec039e42627e20eb22cd52474298f322942a7548068cefd7aed104e167ca59ba806673f2b05f83de129e0601af7c4e792133b3befc91f"
+        },
+        "arm64": {
+            "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/9.0.315/dotnet-sdk-9.0.315-win-arm64.zip",
+            "hash": "sha512:3f28a674f08ab6174a852be2fe96542987ec6262612ba2a82b9db2c5d1ecefaec3af359e7b13025e00e1be38b4e4b65b699aae66e3949ef69d265256ec0e17e1"
+        }
+    },
+    "env_add_path": ".",
+    "env_set": {
+        "DOTNET_ROOT": "$dir",
+        "MSBuildSDKsPath": "$dir\\sdk\\$version\\Sdks"
+    },
+    "pre_uninstall": "info 'If the uninstall fails with a message saying that access is denied, you may need to log out of your current account, log back in and try again.'",
+    "checkver": {
+        "url": "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/releases-index.json",
+        "jsonpath": "$..releases-index[?(@.channel-version == '9.0')].latest-sdk",
+        "regex": "([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/$version/dotnet-sdk-$version-win-x64.zip"
+            },
+            "32bit": {
+                "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/$version/dotnet-sdk-$version-win-x86.zip"
+            },
+            "arm64": {
+                "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/$version/dotnet-sdk-$version-win-arm64.zip"
+            }
+        },
+        "hash": {
+            "url": "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/$majorVersion.$minorVersion/releases.json",
+            "regex": "(?s)$basename.*?$sha512"
+        }
+    }
+}

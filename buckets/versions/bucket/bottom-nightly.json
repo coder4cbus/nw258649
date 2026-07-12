@@ -1,0 +1,39 @@
+{
+    "version": "20260705-e61385b7-1783213424",
+    "description": "Graphical process/system monitor",
+    "homepage": "https://github.com/ClementTsang/bottom",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ClementTsang/bottom/releases/download/nightly-e61385b7-1783213424/bottom_x86_64-pc-windows-msvc.zip",
+            "hash": "2b6f470eabf8d26a4f2744891a43424efc359cb69792adebbf37409c4d845da9"
+        },
+        "32bit": {
+            "url": "https://github.com/ClementTsang/bottom/releases/download/nightly-e61385b7-1783213424/bottom_i686-pc-windows-msvc.zip",
+            "hash": "cc4464de73afa0e46fa08e3d5aabd2ca590ec854f3dc39d752ec3c33f71182ff"
+        },
+        "arm64": {
+            "url": "https://github.com/ClementTsang/bottom/releases/download/nightly-e61385b7-1783213424/bottom_aarch64-pc-windows-msvc.zip",
+            "hash": "115d81700dd1fb65a32d8d2a124e879c110fc66256f461b59e70f9c25821309a"
+        }
+    },
+    "bin": "btm.exe",
+    "checkver": {
+        "url": "https://github.com/ClementTsang/bottom/releases?q=nightly",
+        "regex": "releases/tag/nightly-(?<tag>[\\w]+-[\\d]+)\".+?>Nightly.+?\\((?<date>(?<year>\\d{4})-(?<month>\\d{2})-(?<day>\\d{2}))\\)<",
+        "replace": "${year}${month}${day}-${tag}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ClementTsang/bottom/releases/download/nightly-$matchTag/bottom_x86_64-pc-windows-msvc.zip"
+            },
+            "32bit": {
+                "url": "https://github.com/ClementTsang/bottom/releases/download/nightly-$matchTag/bottom_i686-pc-windows-msvc.zip"
+            },
+            "arm64": {
+                "url": "https://github.com/ClementTsang/bottom/releases/download/nightly-$matchTag/bottom_aarch64-pc-windows-msvc.zip"
+            }
+        }
+    }
+}
