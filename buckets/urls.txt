@@ -1,0 +1,13 @@
+https://scoop.netlify.app/buckets/
+https://github.com/hoilc/scoop-lemon.git
+https://github.com/ScoopInstaller/Extras.git
+https://github.com/ScoopInstaller/Main
+https://github.com/matthewjberger/scoop-nerd-fonts
+https://github.com/ScoopInstaller/Versions
+https://github.com/ygguorun/scoop-bucket
+
+
+
+
+
+

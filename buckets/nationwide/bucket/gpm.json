@@ -1,0 +1,20 @@
+{
+    "version": "0.16.0",
+    "description": "Command line tool for working with Guidewire products",
+    "url": "https://github.nwie.net/Nationwide/gpm/releases/download/v0.16.0/gpm-0.16.0-distribution.zip",
+    "hash": "e66670893a3594623d218eb251d19601345e092cb26dac0f7c142f474024b6be",
+    "notes": [
+        "Your GPM_SCRIPTS has been set to: $dir\\gpm-0.16.0\\bin",
+        "If you installed via GitBash, please close and re-open all GitBash windows to refresh your environment"
+    ],
+    "bin": [
+        [
+            "gpm-0.16.0/bin/gpm",
+            "gpm"
+        ]
+    ],
+    "env_set": {
+        "GPM_SCRIPTS": "$dir\\gpm-0.16.0\\bin"
+    },
+    "homepage": "https://pages.github.nwie.net/Nationwide/gpm/"
+}

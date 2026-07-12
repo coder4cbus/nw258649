@@ -1,0 +1,8 @@
+# Backup files.
+*~
+
+# macOS system files.
+._*
+
+# Sublime Text files.
+*.sublime-workspace

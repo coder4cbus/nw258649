@@ -1,0 +1,12 @@
+{
+    "version": "3.2.1",
+    "url": "https://github.nwie.net/Nationwide/aws-federator/releases/download/v3.2.1/aws-federator-3.2.1-windows-amd64.exe#/aws-federator.exe",
+    "description": "Easily manage federated AWS credentials from the command-line.",
+    "bin": [
+        [
+            "aws-federator.exe",
+            "aws-federator"
+        ]
+    ],
+    "homepage": "https://github.nwie.net/Nationwide/aws-federator"
+}

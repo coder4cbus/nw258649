@@ -1,0 +1,13 @@
+{
+    "version": "1.0.4",
+    "description": "Twistlock scanning command line interface for BASH",
+    "url": "https://raw.github.nwie.net/Nationwide/twistcli/1.0.4/bash/twistcli_scan.sh",
+    "hash": "3d42192eea4f45bc61509aaee4efb8d1cd173a919bc628828a44d8be38758bb1",
+    "bin": [
+      [
+        "twistcli_scan.sh",
+        "twistcli"
+      ]
+    ],
+    "homepage": "https://github.nwie.net/Nationwide/twistcli"
+  }

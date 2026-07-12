@@ -1,0 +1,13 @@
+{
+    "version": "1.0.4",
+    "description": "Twistlock scanning command line interface for Powershell",
+    "url": "https://raw.github.nwie.net/Nationwide/twistcli/1.0.4/powershell/twistcli_scan.ps1",
+    "hash": "4edd65b95895d2770dde20e4484c57de8839158df8f75f165e7f0374e258000f",
+    "bin": [
+      [
+        "twistcli_scan.ps1",
+        "twistcli"
+      ]
+    ],
+    "homepage": "https://github.nwie.net/Nationwide/twistcli"
+  }

@@ -1,0 +1,23 @@
+{
+    "description": "A communications service that lets you meet, chat, and place business calls inside and outside your organization, all using a single application.",
+    "homepage": "https://aws.amazon.com/chime/",
+    "version": "4.28.9164",
+    "url": "https://clients.chime.aws/win/releases/Chime.4.28.9164.exe",
+    "hash": "e9febc9ebd372a3010eddffb2cdf6ca1f73942a101e1cd43d31363d0c57bf537",
+    "installer": {
+        "file": "Chime.4.28.9164.exe",
+        "args": [
+            "/VERYSILENT",
+            "/CLOSEAPPLICATIONS",
+            "/DIR=\"$dir\"",
+            "/NAS"
+        ]
+    },
+    "uninstaller": {
+        "file": "unins000.exe",
+        "args": [
+            "/VERYSILENT",
+            "/CLOSEAPPLICATIONS"
+        ]
+    }
+}

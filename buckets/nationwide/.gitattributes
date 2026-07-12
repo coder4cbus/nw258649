@@ -1,0 +1,2 @@
+# Retain Windows line-endings in case this is checked out on macOS or Linux.
+* text eol=crlf

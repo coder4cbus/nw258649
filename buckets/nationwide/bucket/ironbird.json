@@ -1,0 +1,12 @@
+{
+  "version": "0.0.14",
+  "description": "Concourse task testing framework",
+  "url": "https://github.nwie.net/Nationwide/ironbird/releases/download/v0.0.14/ironbird-windows-amd64.exe",
+  "bin": [
+    [
+      "ironbird-windows-amd64.exe",
+      "ironbird"
+    ]
+  ],
+  "homepage": "https://github.nwie.net/Nationwide/ironbird"
+}

@@ -1,0 +1,13 @@
+{
+    "version": "3.1.0",
+    "url": "https://github.nwie.net/Nationwide/pidm/releases/download/3.1.0/pidm-windows_amd64.zip",
+    "description": "Command line interface for interacting with pidm.nwie.net.",
+    "extract_dir": "windows_amd64",
+    "bin": [
+        [
+            "pidm.exe",
+            "pidm"
+        ]
+    ],
+    "homepage": "https://github.nwie.net/Nationwide/pidm"
+}

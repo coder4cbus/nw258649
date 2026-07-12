@@ -1,0 +1,11 @@
+{
+    "version": "1.0.9",
+    "description": "This is a tiny command line interface (CLI) around the Kafka Connect REST Interface to manage connectors. It is used in a git like fashion where the first program argument indicates the command: it can be one of [ps|get|rm|create|run|status|status|plugins|describe|validate|restart|pause|resume].",
+    "homepage": "https://github.com/lensesio/kafka-connect-tools",
+    "url": "https://github.com/lensesio/kafka-connect-tools/releases/download/v1.0.9/kafka-connect-cli-1.0.9-all.jar",
+    "hash": "2b3b5c3cc128f1478bf5366fe2c6817b04f12620e7cd7154be28ee0c86e5ee3e",
+    "bin": [["kafka-connect-cli-1.0.9-all.jar", "connect-cli"]],
+    "suggest": {
+        "JDK": ["java/oraclejdk", "java/openjdk"]
+    }
+}
