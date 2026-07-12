@@ -1,0 +1,55 @@
+{
+    "version": "1.5.3",
+    "description": " Open source (GPLv2) anti-virus toolkit",
+    "homepage": "https://www.clamav.net",
+    "license": "GPL-2.0-only",
+    "notes": [
+        "To run first time setup ",
+        "Edit Configuration files clamd.conf, freshclam.conf @ $dir",
+        "Run freshclam.exe before running first scan",
+        "visit https://docs.clamav.net/manual/Usage/Configuration.html"
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/Cisco-Talos/clamav/releases/download/clamav-1.5.3/clamav-1.5.3.win.x64.zip",
+            "hash": "e998b3b98c2812726ca7f4db06bf89c4b52a7eb7160ab93403c3ec790a9be6b6",
+            "extract_dir": "clamav-1.5.3.win.x64"
+        },
+        "32bit": {
+            "url": "https://github.com/Cisco-Talos/clamav/releases/download/clamav-1.5.3/clamav-1.5.3.win.win32.zip",
+            "hash": "934cf2e53aa6457fa7227b766af4d939fc8945db0bca3760e3a186a581e3105b",
+            "extract_dir": "clamav-1.5.3.win.win32"
+        }
+    },
+    "post_install": [
+        "Copy-Item \"$dir\\conf_examples\\freshclam.conf.sample\" \"$dir\\freshclam.conf\"",
+        "Copy-Item \"$dir\\conf_examples\\clamd.conf.sample\" \"$dir\\clamd.conf\""
+    ],
+    "bin": [
+        "clambc.exe",
+        "clamconf.exe",
+        "clamd.exe",
+        "clamdscan.exe",
+        "clamdtop.exe",
+        "clamscan.exe",
+        "clamsubmit.exe",
+        "freshclam.exe",
+        "sigtool.exe"
+    ],
+    "checkver": {
+        "github": "https://github.com/Cisco-Talos/clamav",
+        "regex": "^clamav-([\\d.]+)$"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/Cisco-Talos/clamav/releases/download/clamav-$version/clamav-$version.win.x64.zip",
+                "extract_dir": "clamav-$version.win.x64"
+            },
+            "32bit": {
+                "url": "https://github.com/Cisco-Talos/clamav/releases/download/clamav-$version/clamav-$version.win.win32.zip",
+                "extract_dir": "clamav-$version.win.win32"
+            }
+        }
+    }
+}

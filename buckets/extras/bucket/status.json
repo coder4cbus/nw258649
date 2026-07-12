@@ -1,0 +1,34 @@
+{
+    "version": "2.38.1-2959dc",
+    "description": "A messenger, crypto wallet, and Web3 browser.",
+    "homepage": "https://status.app/",
+    "license": "MPL-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/status-im/status-desktop/releases/download/2.38.1/StatusIm-Desktop-2.38.1-2959dc-x86_64.7z",
+            "hash": "02f8890c1e0e685b7b29beeba437c72a774667df3350cc47ccf85cb49efc3cac"
+        }
+    },
+    "extract_dir": "Status",
+    "pre_install": "if (!(Test-Path \"$env:LOCALAPPDATA\\Status\")) { New-Item \"$env:LOCALAPPDATA\\Status\" -ItemType Directory | Out-Null }",
+    "bin": "Status.exe",
+    "shortcuts": [
+        [
+            "Status.exe",
+            "Status"
+        ]
+    ],
+    "checkver": {
+        "github": "https://api.github.com/repos/status-im/status-app/releases/latest",
+        "jsonpath": "$.assets[*].browser_download_url",
+        "regex": "StatusIm-Desktop-(?<Ver>[\\d.]+)-(?<Build>[\\w]+)-x86_64\\.",
+        "replace": "${Ver}-${Build}"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/status-im/status-desktop/releases/download/$matchVer/StatusIm-Desktop-$version-x86_64.7z"
+            }
+        }
+    }
+}

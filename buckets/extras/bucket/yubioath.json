@@ -1,0 +1,37 @@
+{
+    "version": "7.4.0",
+    "description": "Yubico Authenticator for Desktop",
+    "homepage": "https://developers.yubico.com/yubioath-flutter/",
+    "license": "Apache-2.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://developers.yubico.com/yubioath-flutter/Releases/yubico-authenticator-7.4.0-win64.msi",
+            "hash": "616bec7354eb8830ced8338a50c405f4d0277d626967c45cb1bf5ca3e9d8e3b1"
+        }
+    },
+    "extract_dir": "PFiles\\Yubico\\Yubico Authenticator",
+    "bin": [
+        "authenticator.exe",
+        [
+            "authenticator.exe",
+            "yubico-authenticator"
+        ]
+    ],
+    "shortcuts": [
+        [
+            "authenticator.exe",
+            "Yubico Authenticator"
+        ]
+    ],
+    "checkver": {
+        "url": "https://developers.yubico.com/yubioath-flutter/Releases/",
+        "regex": "yubico-authenticator-([\\w.]+)-win64\\.msi"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://developers.yubico.com/yubioath-flutter/Releases/yubico-authenticator-$version-win64.msi"
+            }
+        }
+    }
+}

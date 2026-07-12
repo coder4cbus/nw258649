@@ -1,0 +1,43 @@
+{
+    "version": "1.23.1",
+    "description": "Kubernates container management tool that can build, push, and pull images and run containers.",
+    "homepage": "https://rancherdesktop.io/",
+    "license": "Apache-2.0",
+    "notes": [
+        "Rancher Desktop requires WSL (Windows Subsystem for Linux) to work properly.",
+        "Learn more about WSL: https://aka.ms/wsl2"
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/rancher-sandbox/rancher-desktop/releases/download/v1.23.1/Rancher.Desktop.Setup.1.23.1.msi",
+            "hash": "sha512:7470dffd5444de1af4d7c7e5f7a607e5ecd727949f8a3e7e59d6d548d91b78e666718af483fa821396f69060ec4305c018e7d259abd3a410a2893f946bc51f9b"
+        }
+    },
+    "extract_dir": "Rancher Desktop",
+    "env_add_path": [
+        "resources\\resources\\win32\\bin",
+        "resources\\resources\\linux\\bin"
+    ],
+    "post_install": [
+        "# Rancher Desktop can't be started from a symlinked directory. See: https://github.com/ScoopInstaller/Extras/issues/14691",
+        "startmenu_shortcut \"$original_dir\\Rancher Desktop.exe\" 'Rancher Desktop' $null $null $global"
+    ],
+    "post_uninstall": [
+        "# Remove shortcut",
+        "Write-Host \"Removing shortcut $(friendly_path \"$(shortcut_folder $global)\\Rancher Desktop.lnk\")\"",
+        "Remove-Item \"$(shortcut_folder $global)\\Rancher Desktop.lnk\" -Force -ErrorAction SilentlyContinue"
+    ],
+    "checkver": {
+        "github": "https://github.com/rancher-sandbox/rancher-desktop"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/rancher-sandbox/rancher-desktop/releases/download/v$version/Rancher.Desktop.Setup.$version.msi",
+                "hash": {
+                    "url": "$url.sha512sum"
+                }
+            }
+        }
+    }
+}
