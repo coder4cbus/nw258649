@@ -1,0 +1,14 @@
+Atlassian Rovo MCP server
+Visual Studio Code is requesting access
+This MCP Client is requesting to be authorized on Atlassian Rovo MCP server. If you approve, you will be redirected to Atlassian to complete authentication
+
+Details
+Name:
+Visual Studio Code
+Website:
+https://code.visualstudio.com
+Redirect URIs:
+https://insiders.vscode.dev/redirect
+https://vscode.dev/redirect
+http://127.0.0.1/
+http://127.0.0.1:33418/
